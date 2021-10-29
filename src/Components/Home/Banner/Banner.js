@@ -52,8 +52,8 @@ const Banner = () => {
           </Carousel>
         </div>
       </div>
-      <div className="col-4 col-md-4 pe-1">
-        <div className="row mb-3 ">
+      <div className="col-4 col-md-4 ">
+        <div className="row mb-4 ">
           <img className="img-fluid" src={pic1} alt="" />
         </div>
         <div className="row">

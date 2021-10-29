@@ -1,0 +1,15 @@
+.gallery {
+  background-color: #fab23e;
+  color: #fff;
+}
+.items {
+  display: flex;
+}
+
+.images img {
+  width: 300px;
+}
+.gallery-text {
+  margin-top: 260px;
+  width: 75%;
+}
