@@ -8,9 +8,10 @@ import review3 from "../../Images/review3.jpg";
 const Reviews = () => {
   return (
     <div className="container ">
+      <h3 className="m-5">Reviews</h3>
       <Carousel>
         <Carousel.Item interval={3000}>
-          <Card className="card" style={{ width: "18rem" }}>
+          <Card className="slider" style={{ width: "18rem" }}>
             <Card.Img variant="top" className="review" src={review1} />
             <Card.Body>
               <Card.Text>
@@ -23,7 +24,7 @@ const Reviews = () => {
           </Card>
         </Carousel.Item>
         <Carousel.Item interval={3000}>
-          <Card style={{ width: "18rem" }}>
+          <Card className="slider" style={{ width: "18rem" }}>
             <Card.Img variant="top" className="review" src={review2} />
             <Card.Body>
               <Card.Text>
@@ -36,14 +37,13 @@ const Reviews = () => {
           </Card>
         </Carousel.Item>
         <Carousel.Item interval={3000}>
-          <Card style={{ width: "18rem" }}>
+          <Card className="slider" style={{ width: "18rem" }}>
             <Card.Img variant="top" className="review" src={review3} />
             <Card.Body>
               <Card.Text>
                 I just returned from Australia and I can't stop raving.The trip
                 far exceeded my expectations. Everything from the guides to the
-                accommodations and food was wonderful.Going to Australia was a
-                life changing experience.
+                accommodations and food was wonderful.
               </Card.Text>
               <Card.Title>Terry Black</Card.Title>
             </Card.Body>

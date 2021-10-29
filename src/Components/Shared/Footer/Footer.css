@@ -1,0 +1,36 @@
+.footer {
+  margin-top: 200px;
+  background-color: #373337;
+}
+.word {
+  color: #fff;
+}
+.footer-info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 15px;
+  padding-top: 50px;
+}
+.footer-info a {
+  text-decoration: none;
+  color: #957f64;
+}
+.line {
+  color: #957f64;
+}
+.footer-logo {
+  width: 200px;
+}
+.address {
+  color: #957f64;
+}
+input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #957f64;
+}
+.signup {
+  background-color: #373337;
+  color: #957f64;
+  border: none;
+}
