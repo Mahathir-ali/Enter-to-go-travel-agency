@@ -1,0 +1,19 @@
+.add-plan {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.add-plan form input,
+textarea {
+  width: 50%;
+  padding: 8px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #000;
+}
+.add-plan .submit {
+  background-color: #af1e64;
+  color: #fff;
+  font-size: 18px;
+}
