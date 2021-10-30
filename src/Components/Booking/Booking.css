@@ -1,7 +1,20 @@
+.book {
+  display: flex;
+}
+.info-form {
+  width: 400px;
+  height: 426px;
+  margin-left: 20px;
+  margin-right: 100px;
+  box-shadow: 5px 4px 5px 4px rgba(0, 0, 0, 0.24);
+}
+
 .booking-detail {
   display: flex;
 }
 .booking-detail .info {
+  width: 400px;
+  height: 426px;
   border: 1px solid #957f64;
 }
 .confirm-btn {
@@ -9,6 +22,7 @@
   color: #fff;
   font-weight: bold;
   border: none;
-  padding: 8px;
-  margin-top: 10px;
+  border-radius: 25px;
+  padding: 10px 30px;
+  margin-bottom: 8px;
 }

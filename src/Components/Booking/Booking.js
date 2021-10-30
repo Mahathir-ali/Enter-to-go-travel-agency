@@ -1,12 +1,21 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "./Booking.css";
+import { useForm } from "react-hook-form";
+import useAuth from "../hooks/useAuth";
+
 const Booking = () => {
+  const { user } = useAuth();
+  const { register, handleSubmit, reset } = useForm();
+  const onSubmit = (data) => {
+    console.log(data);
+    reset();
+  };
   const { id } = useParams();
   const [details, setDetails] = useState([]);
   const [singleDetail, setSingleDetail] = useState({});
 
-  const url = `http://localhost:5000/plans`;
+  const url = `https://limitless-dawn-51897.herokuapp.com/plans`;
   useEffect(() => {
     fetch(url)
       .then((res) => res.json())
@@ -20,20 +29,70 @@ const Booking = () => {
     }
   }, [details]);
 
+  const handleMyBooking = () => {
+    const book = singleDetail;
+    book.email = user.email;
+    console.log(book);
+
+    fetch("https://limitless-dawn-51897.herokuapp.com/addBooking", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify(book),
+    });
+  };
+
   return (
-    <div>
+    <div className=" container">
       <h1 className="p-5">Booking Conformation</h1>
-      <div className=" container booking-detail">
-        <div>
-          <img src={singleDetail.img} alt="" />
+      <div className="book">
+        <div className=" booking-detail">
+          <div>
+            <img src={singleDetail.img} alt="" />
+          </div>
+          <div className="info">
+            <h3>Destination: {singleDetail.Name}</h3>
+            <p className="p-4">{singleDetail.description}</p>
+            <h5>
+              Cost: {singleDetail.price} /<small>for 3 Days</small>
+            </h5>
+          </div>
         </div>
-        <div className="info">
-          <h3>Destination: {singleDetail.Name}</h3>
-          <p className="p-4">{singleDetail.description}</p>
-          <h5>
-            Cost: {singleDetail.price} /<small>for 3 Days</small>
-          </h5>
-          <button className="confirm-btn">CONFIRM BOOKING</button>
+        <div>
+          <div className="info-form add-plan">
+            <h4 className="text-center mb-2">FILL UP THE FORM</h4>
+            <form onSubmit={handleSubmit(onSubmit)}>
+              <input
+                defaultValue={user.displayName}
+                {...register("name", { required: true, maxLength: 20 })}
+                placeholder="name"
+              />
+              <br />
+              <input
+                defaultValue={user.email}
+                {...register("email", { required: true })}
+              />
+              <br />
+              <textarea {...register("description")} placeholder="ADDRESS" />
+              <br />
+              <input
+                placeholder="phone number"
+                defaultValue=""
+                {...register("phone")}
+              />
+              <br />
+              <input
+                defaultValue={singleDetail.price}
+                type="number"
+                {...register("price")}
+                placeholder="MAKE PAYMENT"
+              />
+              <br />
+
+              <button onClick={handleMyBooking} className="confirm-btn">
+                CONFIRM BOOKING
+              </button>
+            </form>
+          </div>
         </div>
       </div>
     </div>

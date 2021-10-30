@@ -26,15 +26,19 @@ const Header = () => {
               <NavLink to="/about">About Us</NavLink>
               <NavLink to="/mybooking">My Booking</NavLink>
               <NavLink to="/add">Add Plan</NavLink>
-              {user?.email ? (
-                <Button onClick={logOut}>Log out</Button>
-              ) : (
-                <Link className="nav-link" to="/login">
-                  Login
-                </Link>
-              )}
             </Nav>
+
+            <img className="user-img" src={user.photoURL} alt="" />
             <h6 className="mt-2"> {user.displayName}</h6>
+            {user?.email ? (
+              <Button className="mx-3   nav-link " onClick={logOut}>
+                Log out
+              </Button>
+            ) : (
+              <Link className=" nav-link mx-3" to="/login">
+                Login
+              </Link>
+            )}
           </Navbar.Collapse>
         </Container>
       </Navbar>
