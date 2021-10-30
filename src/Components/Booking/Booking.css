@@ -1,0 +1,14 @@
+.booking-detail {
+  display: flex;
+}
+.booking-detail .info {
+  border: 1px solid #957f64;
+}
+.confirm-btn {
+  background-color: #fab23e;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  padding: 8px;
+  margin-top: 10px;
+}

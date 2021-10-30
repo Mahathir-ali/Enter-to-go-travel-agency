@@ -1,0 +1,15 @@
+.google {
+  margin: auto;
+  width: 50%;
+  height: 200px;
+  box-shadow: 8px 5px 8px 5px rgba(0, 0, 0, 0.089);
+}
+.google button {
+  margin-top: 40px;
+  padding: 10px;
+  background-color: #fff;
+  border: 2px solid #fab23e;
+}
+.google img {
+  width: 30px;
+}

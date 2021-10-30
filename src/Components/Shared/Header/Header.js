@@ -1,10 +1,12 @@
 import React from "react";
 import "./Header.css";
 import logo from "../../../Images/logo/travel-logo.png";
-import { Container, Nav, Navbar } from "react-bootstrap";
-import { NavLink } from "react-router-dom";
+import { Button, Container, Nav, Navbar } from "react-bootstrap";
+import { Link, NavLink } from "react-router-dom";
+import useAuth from "../../hooks/useAuth";
 
 const Header = () => {
+  const { user, logOut } = useAuth();
   return (
     <div>
       <Navbar bg="light" expand="lg">
@@ -24,7 +26,15 @@ const Header = () => {
               <NavLink to="/about">About Us</NavLink>
               <NavLink to="/mybooking">My Booking</NavLink>
               <NavLink to="/add">Add Plan</NavLink>
+              {user?.email ? (
+                <Button onClick={logOut}>Log out</Button>
+              ) : (
+                <Link className="nav-link" to="/login">
+                  Login
+                </Link>
+              )}
             </Nav>
+            <h6 className="mt-2"> {user.displayName}</h6>
           </Navbar.Collapse>
         </Container>
       </Navbar>

@@ -1,7 +1,15 @@
 import React from "react";
+import { useHistory } from "react-router";
+import "./Plan.css";
 
 const Plan = ({ plan }) => {
-  const { Name, description, price, img } = plan;
+  const { Name, description, price, img, _id } = plan;
+  const history = useHistory();
+  const handleBooking = (id) => {
+    const uri = `/booking/${id}`;
+    history.push(uri);
+  };
+
   return (
     <>
       <div className="card-group">
@@ -13,7 +21,9 @@ const Plan = ({ plan }) => {
             <h5>${price}</h5>
           </div>
           <div className="card-footer">
-            <button>BOOK NOW</button>
+            <button onClick={() => handleBooking(_id)} className="bookNow">
+              BOOK NOW
+            </button>
           </div>
         </div>
       </div>

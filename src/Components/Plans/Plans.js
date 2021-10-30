@@ -5,7 +5,7 @@ import { useState } from "react";
 import Plan from "../Plan/Plan";
 
 const Plans = () => {
-  const [plans, setPlans] = useState();
+  const [plans, setPlans] = useState([]);
   useEffect(() => {
     fetch("http://localhost:5000/plans")
       .then((res) => res.json())
