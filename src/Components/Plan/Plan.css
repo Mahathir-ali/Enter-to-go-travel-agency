@@ -7,3 +7,6 @@
 .card-footer {
   background-color: #fab23e;
 }
+.card {
+  border: none;
+}

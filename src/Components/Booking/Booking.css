@@ -26,3 +26,45 @@
   padding: 10px 30px;
   margin-bottom: 8px;
 }
+
+@media only screen and (min-width: 689px) and (max-width: 991px) {
+  .book,
+  .booking-detail {
+    flex-direction: column;
+  }
+  .book {
+    column-gap: 100px;
+  }
+
+  .info-form,
+  .destination,
+  .booking-detail .info,
+  .info-form {
+    width: 100%;
+  }
+  .info-form {
+    width: 100%;
+    padding-top: 50px;
+    box-shadow: none;
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 568px) {
+  .book,
+  .booking-detail {
+    flex-direction: column;
+  }
+
+  .info-form,
+  .destination,
+  .booking-detail .info,
+  .info-form {
+    width: 100%;
+  }
+  .info-form {
+    width: 100%;
+    margin: auto;
+    padding-top: 50px;
+    box-shadow: none;
+  }
+}

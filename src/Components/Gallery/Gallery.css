@@ -13,3 +13,23 @@
   margin-top: 260px;
   width: 75%;
 }
+@media only screen and (min-width: 689px) and (max-width: 991px) {
+  .items {
+    flex-direction: column;
+    padding-bottom: 20px;
+  }
+  .gallery-text {
+    margin: 0;
+    margin: auto;
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 568px) {
+  .items {
+    padding: 20px;
+    flex-direction: column;
+  }
+  .gallery-text {
+    margin: 0;
+    margin: auto;
+  }
+}

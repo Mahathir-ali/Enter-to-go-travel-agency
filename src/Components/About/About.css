@@ -1,0 +1,14 @@
+.about {
+  display: flex;
+  background-color: #f6f8f4;
+}
+.about-us {
+  margin: auto;
+  padding-right: 20px;
+}
+.heading {
+  font-family: "Dancing Script", cursive;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #4b5664;
+}

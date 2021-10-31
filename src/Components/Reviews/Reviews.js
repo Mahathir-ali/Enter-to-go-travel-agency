@@ -8,7 +8,7 @@ import review3 from "../../Images/review3.jpg";
 const Reviews = () => {
   return (
     <div className="container ">
-      <h3 className="m-5">Reviews</h3>
+      <h3 className="m-5 heading">Reviews</h3>
       <Carousel>
         <Carousel.Item interval={3000}>
           <Card className="slider" style={{ width: "18rem" }}>

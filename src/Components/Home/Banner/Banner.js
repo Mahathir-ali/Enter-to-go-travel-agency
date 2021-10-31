@@ -54,7 +54,7 @@ const Banner = () => {
       </div>
       <div className="col-4 col-md-4 ">
         <div className="row mb-4 ">
-          <img className="img-fluid" src={pic1} alt="" />
+          <img className="img-fluid " src={pic1} alt="" />
         </div>
         <div className="row">
           <img className="img-fluid" src={pic2} alt="" />

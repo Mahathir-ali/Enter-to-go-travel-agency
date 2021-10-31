@@ -12,7 +12,7 @@ import pic8 from "../../Images/gallery/pic8.jpg";
 const Gallery = () => {
   return (
     <>
-      <h4 className="mt-5">This Season Main Attraction</h4>
+      <h4 className="mt-5 heading">This Season Main Attraction</h4>
       <div className="gallery mt-5">
         <div className="container items mt">
           <div>

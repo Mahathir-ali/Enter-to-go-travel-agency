@@ -13,8 +13,8 @@ const Plans = () => {
   }, []);
   return (
     <div className=" container mt-5">
-      <h5>Tours</h5>
-      <h4 className="mb-4">OTHER DESTINATIONS</h4>
+      <h5 className="heading">Tours</h5>
+      <h4 className="mb-4 heading">OTHER DESTINATIONS</h4>
       <div className="plans">
         {plans.map((plan) => (
           <Plan key={plan._id} plan={plan}></Plan>

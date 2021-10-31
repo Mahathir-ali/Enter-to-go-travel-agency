@@ -18,7 +18,9 @@ const Header = () => {
             className="d-inline-block align-top"
             alt="React Bootstrap logo"
           />
-          <Navbar.Brand href="#home">Enter To Go</Navbar.Brand>
+          <Navbar.Brand className="heading" href="#home">
+            Enter To Go
+          </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto nav">
@@ -29,9 +31,9 @@ const Header = () => {
             </Nav>
 
             <img className="user-img" src={user.photoURL} alt="" />
-            <h6 className="mt-2"> {user.displayName}</h6>
+            <h6 className="mt-2 user-name"> {user.displayName}</h6>
             {user?.email ? (
-              <Button className="mx-3   nav-link " onClick={logOut}>
+              <Button className=" mx-auto  nav-link " onClick={logOut}>
                 Log out
               </Button>
             ) : (

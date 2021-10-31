@@ -24,7 +24,7 @@ const Booking = () => {
 
   useEffect(() => {
     if (details.length > 0) {
-      const plan = details.find((detail) => detail._id == id);
+      const plan = details.find((detail) => detail._id === id);
       setSingleDetail(plan);
     }
   }, [details]);
@@ -47,7 +47,7 @@ const Booking = () => {
       <div className="book">
         <div className=" booking-detail">
           <div>
-            <img src={singleDetail.img} alt="" />
+            <img className="destination" src={singleDetail.img} alt="" />
           </div>
           <div className="info">
             <h3>Destination: {singleDetail.Name}</h3>
