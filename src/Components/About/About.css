@@ -12,3 +12,14 @@
   font-weight: 700;
   color: #4b5664;
 }
+
+@media only screen and (min-width: 689px) and (max-width: 991px) {
+  .about {
+    flex-direction: column;
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 568px) {
+  about {
+    flex-direction: column;
+  }
+}
