@@ -26,8 +26,8 @@ const Header = () => {
             <Nav className="me-auto nav">
               <NavLink to="/home">Home</NavLink>
               <NavLink to="/about">About Us</NavLink>
-              <NavLink to="/mybooking">My Booking</NavLink>
-              <NavLink to="/add">Add Plan</NavLink>
+              {user?.email && <NavLink to="/mybooking">My Booking</NavLink>}
+              <NavLink to="/dashboard">Dashboard</NavLink>
             </Nav>
 
             <img className="user-img" src={user.photoURL} alt="" />

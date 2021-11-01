@@ -6,7 +6,11 @@
 }
 .card-footer {
   background-color: #fab23e;
+  border-radius: 50%;
 }
 .card {
   border: none;
+}
+.card-footer button {
+  padding: 3px 100px;
 }

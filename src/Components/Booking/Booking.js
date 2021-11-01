@@ -32,6 +32,7 @@ const Booking = () => {
   const handleMyBooking = () => {
     const book = singleDetail;
     book.email = user.email;
+    book.userName = user.displayName;
     console.log(book);
 
     fetch("https://limitless-dawn-51897.herokuapp.com/addBooking", {

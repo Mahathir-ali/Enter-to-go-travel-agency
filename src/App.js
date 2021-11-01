@@ -4,6 +4,7 @@ import About from "./Components/About/About";
 import AddNewService from "./Components/AddNewService/AddNewService";
 import Booking from "./Components/Booking/Booking";
 import AuthProvider from "./Components/Contexts/AuthProvider";
+import DashBoard from "./Components/DashBoard/DashBoard";
 import Home from "./Components/Home/Home/Home";
 import Login from "./Components/Login/Login";
 import MyBooking from "./Components/MyBooking/MyBooking";
@@ -36,6 +37,9 @@ function App() {
             </PrivateRoute>
             <PrivateRoute path="/myBooking">
               <MyBooking></MyBooking>
+            </PrivateRoute>
+            <PrivateRoute path="/dashboard">
+              <DashBoard></DashBoard>
             </PrivateRoute>
             <Route path="/login">
               <Login></Login>

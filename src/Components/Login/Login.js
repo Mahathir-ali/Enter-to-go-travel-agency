@@ -9,7 +9,7 @@ const Login = () => {
   const history = useHistory();
   const location = useLocation();
 
-  const url = location?.from || "/";
+  const url = location?.from || "/dashboard";
 
   const handleLogin = () => {
     signinWithGoogle()
