@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useHistory } from "react-router-dom";
 import "./Booking.css";
 import { useForm } from "react-hook-form";
 import useAuth from "../hooks/useAuth";
 
 const Booking = () => {
   const { user } = useAuth();
+  const history = useHistory();
+  const uri = `/mybooking`;
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = (data) => {
     console.log(data);
@@ -33,13 +35,14 @@ const Booking = () => {
     const book = singleDetail;
     book.email = user.email;
     book.userName = user.displayName;
-    console.log(book);
+    // console.log(book);
 
     fetch("https://limitless-dawn-51897.herokuapp.com/addBooking", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(book),
     });
+    history.push(uri);
   };
 
   return (

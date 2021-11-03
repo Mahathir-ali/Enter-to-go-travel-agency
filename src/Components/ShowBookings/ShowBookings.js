@@ -1,7 +1,15 @@
+// import { Spinner } from "react-bootstrap";
+import { useHistory } from "react-router";
+// import useAuth from "../hooks/useAuth";
+
 const ShowBookings = ({ myBooking }) => {
   const { Name, price, img, description, _id } = myBooking;
+  // const { isLoading } = useAuth();
+  const history = useHistory();
 
   const handleDelete = (id) => {
+    const uri = `/mybooking`;
+
     const url = `https://limitless-dawn-51897.herokuapp.com/booking/${id}`;
     fetch(url, {
       method: "DELETE",
@@ -10,6 +18,7 @@ const ShowBookings = ({ myBooking }) => {
       .then((data) => {
         if (data.deletedCount) {
           alert("Your Booking is Canceled");
+          history.push(uri);
         }
       });
   };
